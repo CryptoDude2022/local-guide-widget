@@ -23,9 +23,9 @@ html, body {
 }
 
 #lv-container {
-  max-width: 480px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 24px 20px;
+  padding: 24px 32px;
 }
 
 /* HEADER - Stile Lodgify elegante */
@@ -328,7 +328,31 @@ html, body {
   font-weight: 500;
 }
 
-/* RESPONSIVE */
+/* DESKTOP - 2 columns for restaurants */
+@media(min-width:768px){
+  .lv-restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  #lv-header { padding: 32px; }
+  #lv-header-title { font-size: 26px; }
+  #lv-header-subtitle { font-size: 15px; }
+  .lv-section-title { font-size: 13px; }
+  .lv-restaurant-name { font-size: 16px; }
+}
+
+/* TABLET */
+@media(max-width:767px) and (min-width:481px){
+  #lv-container { padding: 20px 24px; }
+  .lv-restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+/* MOBILE */
 @media(max-width:480px){
   #lv-container { padding: 16px 14px; }
   #lv-header { padding: 22px 18px; }
